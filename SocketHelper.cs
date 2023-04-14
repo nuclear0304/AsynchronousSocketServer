@@ -130,7 +130,7 @@ namespace AsynchronousSocketServer
                     //收到資料存入StringBuilder
                     receiveObj.Sb.Append(temstr);
                     RecvAction?.Invoke(temstr);
-                    OnRecv?.Invoke(new RecvEventObj(temstr));
+                    //OnRecv?.Invoke(new RecvEventObj(temstr));
                     if (temstr.IndexOf("<EOF>") > -1)
                     {//收到結束字串, 結束通訊
                         SendObj sendObj = new SendObj

@@ -29,6 +29,16 @@ namespace AsynchronousSocketServer
             c.Exclog = WriteToExclog;
             c.Recvlog = WriteToRecvlog;
             c.StartServer();
+
+            //SocketServerNX c = new SocketServerNX(textBox_Ip.Text, Convert.ToInt16(textBox_Port.Text));
+            //c.runningStatus = WriteToConnstat;
+            //c.SocketReceiveEvent += ReciveEvent;
+            //c.StartServer();
+        }
+
+        private string ReciveEvent(string msg)
+        {
+            return "ack";
         }
 
         private void WriteToConnstat(string s)
